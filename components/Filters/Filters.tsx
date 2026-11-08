@@ -158,6 +158,20 @@ export function Filters({
             </button>
             {open === "brand" ? (
               <ul className={styles.menu} role="listbox" aria-label="Car brand">
+                <li>
+                  <button
+                    type="button"
+                    role="option"
+                    aria-selected={draft.brand === ""}
+                    className={draft.brand === "" ? styles.optionActive : styles.option}
+                    onClick={() => {
+                      updateDraft("brand", "");
+                      setOpen(null);
+                    }}
+                  >
+                    All cars
+                  </button>
+                </li>
                 {(meta?.brands ?? []).map((option) => (
                   <li key={option}>
                     <button
