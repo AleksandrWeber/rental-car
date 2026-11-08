@@ -1,0 +1,180 @@
+.page {
+  min-height: calc(100vh - 68px);
+  padding: 32px 120px 80px;
+  background: #f5f5f5;
+}
+
+.back {
+  width: min(1200px, 100%);
+  margin: 0 auto 20px;
+}
+
+.back a {
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.back a:hover {
+  color: #00aad4;
+}
+
+.layout {
+  display: flex;
+  align-items: flex-start;
+  gap: 32px;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  width: 640px;
+  flex-shrink: 0;
+}
+
+.imageWrap {
+  position: relative;
+  height: 512px;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.photo {
+  object-fit: cover;
+}
+
+.info {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 24px;
+  min-width: 0;
+  padding: 32px 24px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.titleRow {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.titleRow h1 {
+  margin: 0;
+  color: #101828;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.article {
+  margin: 0;
+  color: #8d929a;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.location {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin: 0;
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.price {
+  margin: 0;
+  color: #00aad4;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.description {
+  margin: 16px 0 0;
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.block h2 {
+  margin: 0 0 20px;
+  color: #101828;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.block ul {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.block li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #101828;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+
+.info hr {
+  width: 100%;
+  height: 0;
+  margin: 0;
+  border: 0;
+  border-top: 1px solid #dadde1;
+}
+
+@media (max-width: 1100px) {
+  .page {
+    padding: 32px 24px 64px;
+  }
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .left {
+    width: 100%;
+  }
+
+  .imageWrap {
+    height: 360px;
+  }
+
+  .info {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .page {
+    padding: 24px 16px 48px;
+  }
+}
