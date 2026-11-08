@@ -178,3 +178,95 @@
     padding: 24px 16px 48px;
   }
 }
+
+.formSkeleton {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 16px;
+}
+
+.skeletonLine,
+.skeletonLineShort,
+.skeletonField,
+.skeletonArea,
+.skeletonSubmit,
+.skeletonTitle,
+.skeletonPrice,
+.skeletonText,
+.skeletonBlock {
+  border-radius: 12px;
+}
+
+.skeletonLine {
+  width: 70%;
+  height: 24px;
+}
+
+.skeletonLineShort {
+  width: 88%;
+  height: 20px;
+}
+
+.skeletonField {
+  height: 48px;
+}
+
+.skeletonArea {
+  height: 88px;
+}
+
+.skeletonSubmit {
+  height: 44px;
+}
+
+.skeletonTitle {
+  width: 62%;
+  height: 32px;
+}
+
+.skeletonPrice {
+  width: 72px;
+  height: 32px;
+}
+
+.skeletonText {
+  width: 100%;
+  height: 20px;
+}
+
+.skeletonBlock {
+  height: 160px;
+}
+
+.shimmer {
+  background: linear-gradient(90deg, #f2f4f7 25%, #f7f7f7 50%, #f2f4f7 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.2s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shimmer {
+    animation: none;
+    background: #f2f4f7;
+  }
+}
+
+@media (max-width: 768px) {
+  .formSkeleton {
+    padding: 20px;
+  }
+}

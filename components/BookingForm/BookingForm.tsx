@@ -5,6 +5,7 @@ import { useMutation } from "@tanstack/react-query";
 import { ApiError, createBooking } from "@/services/cars";
 import type { BookingPayload } from "@/types/car";
 import { Icon } from "@/components/Icon/Icon";
+import { Spinner } from "@/components/Spinner/Spinner";
 import styles from "./BookingForm.module.css";
 
 type BookingFormProps = {
@@ -187,7 +188,13 @@ export function BookingForm({ carId }: BookingFormProps) {
         </p>
       ) : null}
 
-      <button type="submit" className={styles.submit} disabled={mutation.isPending}>
+      <button
+        type="submit"
+        className={styles.submit}
+        disabled={mutation.isPending}
+        aria-busy={mutation.isPending}
+      >
+        {mutation.isPending ? <Spinner /> : null}
         {mutation.isPending ? "Sending..." : "Send"}
       </button>
     </form>
